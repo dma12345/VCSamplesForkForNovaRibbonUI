@@ -62,9 +62,6 @@
     <ClInclude Include="pendlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="scribble.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -313,9 +310,6 @@
     <None Include="hlp\scribble.hhk">
       <Filter>HTML Help Files</Filter>
     </None>
-    <None Include="hlp\scribble.hhp">
-      <Filter>HTML Help Files</Filter>
-    </None>
     <None Include="hlp\scribble.hpj">
       <Filter>Source Files</Filter>
     </None>
@@ -334,10 +328,17 @@
     <None Include="res\toolbar.bmp">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="scribble.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="hlp\scribble.hhp" />
+    <CustomBuild Include="resource.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
