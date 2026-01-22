@@ -20,3 +20,5 @@
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
 #include <afxole.h>			// MFC OLE classes
+#include <afxcontrolbars.h>
+

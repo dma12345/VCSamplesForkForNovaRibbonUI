@@ -23,9 +23,9 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CChildFrame
 
-IMPLEMENT_DYNCREATE(CChildFrame, CMDIChildWnd)
+IMPLEMENT_DYNCREATE(CChildFrame, CMDIChildWndEx)
 
-BEGIN_MESSAGE_MAP(CChildFrame, CMDIChildWnd)
+BEGIN_MESSAGE_MAP(CChildFrame, CMDIChildWndEx)
 	//{{AFX_MSG_MAP(CChildFrame)
 		// NOTE - the ClassWizard will add and remove mapping macros here.
 		//    DO NOT EDIT what you see in these blocks of generated code !
@@ -50,7 +50,7 @@ BOOL CChildFrame::PreCreateWindow(CREATESTRUCT& cs)
 	// TODO: Modify the Window class or styles here by modifying
 	//  the CREATESTRUCT cs
 
-	return CMDIChildWnd::PreCreateWindow(cs);
+	return CMDIChildWndEx::PreCreateWindow(cs);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -59,12 +59,12 @@ BOOL CChildFrame::PreCreateWindow(CREATESTRUCT& cs)
 #ifdef _DEBUG
 void CChildFrame::AssertValid() const
 {
-	CMDIChildWnd::AssertValid();
+	CMDIChildWndEx::AssertValid();
 }
 
 void CChildFrame::Dump(CDumpContext& dc) const
 {
-	CMDIChildWnd::Dump(dc);
+	CMDIChildWndEx::Dump(dc);
 }
 
 #endif //_DEBUG

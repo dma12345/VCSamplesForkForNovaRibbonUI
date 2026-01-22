@@ -22,17 +22,17 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CInPlaceFrame
 
-IMPLEMENT_DYNCREATE(CInPlaceFrame, COleIPFrameWnd)
+IMPLEMENT_DYNCREATE(CInPlaceFrame, COleIPFrameWndEx)
 
-BEGIN_MESSAGE_MAP(CInPlaceFrame, COleIPFrameWnd)
+BEGIN_MESSAGE_MAP(CInPlaceFrame, COleIPFrameWndEx)
 	//{{AFX_MSG_MAP(CInPlaceFrame)
 	ON_WM_CREATE()
 	//}}AFX_MSG_MAP
 	// Global help commands
-	ON_COMMAND(ID_HELP_FINDER, COleIPFrameWnd::OnHelpFinder)
-	ON_COMMAND(ID_HELP, COleIPFrameWnd::OnHelp)
-	ON_COMMAND(ID_DEFAULT_HELP, COleIPFrameWnd::OnHelpFinder)
-	ON_COMMAND(ID_CONTEXT_HELP, COleIPFrameWnd::OnContextHelp)
+	ON_COMMAND(ID_HELP_FINDER, COleIPFrameWndEx::OnHelpFinder)
+	ON_COMMAND(ID_HELP, COleIPFrameWndEx::OnHelp)
+	ON_COMMAND(ID_DEFAULT_HELP, COleIPFrameWndEx::OnHelpFinder)
+	ON_COMMAND(ID_CONTEXT_HELP, COleIPFrameWndEx::OnContextHelp)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -48,7 +48,7 @@ CInPlaceFrame::~CInPlaceFrame()
 
 int CInPlaceFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 {
-	if (COleIPFrameWnd::OnCreate(lpCreateStruct) == -1)
+	if (COleIPFrameWndEx::OnCreate(lpCreateStruct) == -1)
 		return -1;
 
 	// CResizeBar implements in-place resizing.
@@ -85,14 +85,14 @@ BOOL CInPlaceFrame::OnCreateControlBars(CFrameWnd* pWndFrame, CFrameWnd* /*pWndD
 	}
 
 	// TODO: Remove this if you don't want tool tips
-	m_wndToolBar.SetBarStyle(m_wndToolBar.GetBarStyle() |
+	m_wndToolBar.SetPaneStyle(m_wndToolBar.GetPaneStyle() |
 		CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC);
 	
-	// TODO: Delete these three lines if you don't want the toolbar to
-	//  be dockable
-	m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
-	pWndFrame->EnableDocking(CBRS_ALIGN_ANY);
-	pWndFrame->DockControlBar(&m_wndToolBar);
+	////// TODO: Delete these three lines if you don't want the toolbar to
+	//////  be dockable
+	////m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
+	////pWndFrame->EnableDocking(CBRS_ALIGN_ANY);
+	////pWndFrame->DockPane(&m_wndToolBar);
 
 
 	return TRUE;
@@ -103,7 +103,7 @@ BOOL CInPlaceFrame::PreCreateWindow(CREATESTRUCT& cs)
 	// TODO: Modify the Window class or styles here by modifying
 	//  the CREATESTRUCT cs
 
-	return COleIPFrameWnd::PreCreateWindow(cs);
+	return COleIPFrameWndEx::PreCreateWindow(cs);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -112,12 +112,12 @@ BOOL CInPlaceFrame::PreCreateWindow(CREATESTRUCT& cs)
 #ifdef _DEBUG
 void CInPlaceFrame::AssertValid() const
 {
-	COleIPFrameWnd::AssertValid();
+	COleIPFrameWndEx::AssertValid();
 }
 
 void CInPlaceFrame::Dump(CDumpContext& dc) const
 {
-	COleIPFrameWnd::Dump(dc);
+	COleIPFrameWndEx::Dump(dc);
 }
 #endif //_DEBUG
 

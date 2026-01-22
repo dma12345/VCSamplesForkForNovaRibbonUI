@@ -9,7 +9,7 @@
 // See these sources for detailed information regarding the
 // Microsoft Foundation Classes product.
 
-class CInPlaceFrame : public COleIPFrameWnd
+class CInPlaceFrame : public COleIPFrameWndEx
 {
 	DECLARE_DYNCREATE(CInPlaceFrame)
 public:
@@ -38,7 +38,7 @@ public:
 #endif
 
 protected:
-	CToolBar    m_wndToolBar;
+	CMFCToolBar    m_wndToolBar;
 	COleResizeBar   m_wndResizeBar;
 	COleDropTarget m_dropTarget;
 

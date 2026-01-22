@@ -10,7 +10,7 @@
 // Microsoft Foundation Classes product.
 /////////////////////////////////////////////////////////////////////////////
 
-class CMainFrame : public CMDIFrameWnd
+class CMainFrame : public CMDIFrameWndEx
 {
 	DECLARE_DYNAMIC(CMainFrame)
 public:
@@ -37,8 +37,8 @@ public:
 #endif
 
 protected:  // control bar embedded members
-	CStatusBar  m_wndStatusBar;
-	CToolBar    m_wndToolBar;
+	CMFCStatusBar  m_wndStatusBar;
+	CMFCToolBar    m_wndToolBar;
 	HICON m_hIcon;
 
 // Generated message map functions

@@ -10,7 +10,7 @@
 // Microsoft Foundation Classes product.
 /////////////////////////////////////////////////////////////////////////////
 
-class CChildFrame : public CMDIChildWnd
+class CChildFrame : public CMDIChildWndEx
 {
 	DECLARE_DYNCREATE(CChildFrame)
 public:
@@ -18,7 +18,7 @@ public:
 
 // Attributes
 protected:
-	CSplitterWnd    m_wndSplitter;
+	CSplitterWndEx    m_wndSplitter;
 public:
 
 // Operations

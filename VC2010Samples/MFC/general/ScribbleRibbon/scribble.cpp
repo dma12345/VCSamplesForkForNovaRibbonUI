@@ -27,17 +27,17 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CScribbleApp
 
-BEGIN_MESSAGE_MAP(CScribbleApp, CWinApp)
+BEGIN_MESSAGE_MAP(CScribbleApp, CWinAppEx)
 	//{{AFX_MSG_MAP(CScribbleApp)
 	ON_COMMAND(ID_APP_ABOUT, OnAppAbout)
 		// NOTE - the ClassWizard will add and remove mapping macros here.
 		//    DO NOT EDIT what you see in these blocks of generated code!
 	//}}AFX_MSG_MAP
 	// Standard file based document commands
-	ON_COMMAND(ID_FILE_NEW, CWinApp::OnFileNew)
-	ON_COMMAND(ID_FILE_OPEN, CWinApp::OnFileOpen)
+	ON_COMMAND(ID_FILE_NEW, CWinAppEx::OnFileNew)
+	ON_COMMAND(ID_FILE_OPEN, CWinAppEx::OnFileOpen)
 	// Standard print setup command
-	ON_COMMAND(ID_FILE_PRINT_SETUP, CWinApp::OnFilePrintSetup)
+	ON_COMMAND(ID_FILE_PRINT_SETUP, CWinAppEx::OnFilePrintSetup)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -80,6 +80,9 @@ BOOL CScribbleApp::InitInstance()
 	//  the specific initialization routines you do not need.
 
 	LoadStdProfileSettings();  // Load standard INI file options (including MRU)
+
+	SetRegistryKey(_T("MFCNext\\Samples\\Scribble2"));
+	SetRegistryBase(_T("Settings"));
 
 	
 	// Register the application's document templates.  Document templates

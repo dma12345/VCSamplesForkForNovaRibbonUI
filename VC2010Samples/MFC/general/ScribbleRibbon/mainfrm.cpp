@@ -23,18 +23,18 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CMainFrame
 
-IMPLEMENT_DYNAMIC(CMainFrame, CMDIFrameWnd)
+IMPLEMENT_DYNAMIC(CMainFrame, CMDIFrameWndEx)
 
-BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
+BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWndEx)
 	//{{AFX_MSG_MAP(CMainFrame)
 		// NOTE - the ClassWizard will add and remove mapping macros here.
 		//    DO NOT EDIT what you see in these blocks of generated code !
 	ON_WM_CREATE()
 	//}}AFX_MSG_MAP
-	ON_COMMAND(ID_HELP_FINDER, CMDIFrameWnd::OnHelpFinder)
-	ON_COMMAND(ID_HELP, CMDIFrameWnd::OnHelp)
-	ON_COMMAND(ID_CONTEXT_HELP, CMDIFrameWnd::OnContextHelp)
-	ON_COMMAND(ID_DEFAULT_HELP, CMDIFrameWnd::OnHelpFinder)
+	ON_COMMAND(ID_HELP_FINDER, CMDIFrameWndEx::OnHelpFinder)
+	ON_COMMAND(ID_HELP, CMDIFrameWndEx::OnHelp)
+	ON_COMMAND(ID_CONTEXT_HELP, CMDIFrameWndEx::OnContextHelp)
+	ON_COMMAND(ID_DEFAULT_HELP, CMDIFrameWndEx::OnHelpFinder)
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -60,7 +60,7 @@ CMainFrame::~CMainFrame()
 
 int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 {
-	if (CMDIFrameWnd::OnCreate(lpCreateStruct) == -1)
+	if (CMDIFrameWndEx::OnCreate(lpCreateStruct) == -1)
 		return -1;
 	
 	if (!m_wndToolBar.Create(this) ||
@@ -84,14 +84,14 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 
 	// TODO: Remove this if you don't want tool tips
-	m_wndToolBar.SetBarStyle(m_wndToolBar.GetBarStyle() |
+	m_wndToolBar.SetPaneStyle(m_wndToolBar.GetPaneStyle() |
 		CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC);
 	
 	// TODO: Delete these three lines if you don't want the toolbar to
 	//  be dockable
 	m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
 	EnableDocking(CBRS_ALIGN_ANY);
-	DockControlBar(&m_wndToolBar);
+	DockPane(&m_wndToolBar);
 
 
 	return 0;
@@ -102,7 +102,7 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 	// TODO: Modify the Window class or styles here by modifying
 	//  the CREATESTRUCT cs
 
-	return CMDIFrameWnd::PreCreateWindow(cs);
+	return CMDIFrameWndEx::PreCreateWindow(cs);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -111,12 +111,12 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 #ifdef _DEBUG
 void CMainFrame::AssertValid() const
 {
-	CMDIFrameWnd::AssertValid();
+	CMDIFrameWndEx::AssertValid();
 }
 
 void CMainFrame::Dump(CDumpContext& dc) const
 {
-	CMDIFrameWnd::Dump(dc);
+	CMDIFrameWndEx::Dump(dc);
 }
 
 #endif //_DEBUG

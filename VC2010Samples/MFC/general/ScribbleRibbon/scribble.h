@@ -20,7 +20,7 @@
 // See Scribble.cpp for the implementation of this class
 //
 
-class CScribbleApp : public CWinApp
+class CScribbleApp : public CWinAppEx
 {
 public:
 	CScribbleApp();
