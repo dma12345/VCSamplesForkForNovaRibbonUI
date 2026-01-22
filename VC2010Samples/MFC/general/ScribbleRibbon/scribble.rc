@@ -13,13 +13,39 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_RIBBON_MAIN         BITMAP                  "res\\main.bmp"
+
+IDB_RIBBON_FILESMALL    BITMAP                  "res\\filesmall.bmp"
+
+IDB_RIBBON_FILELARGE    BITMAP                  "res\\filelarge.bmp"
+
+IDB_RIBBON_HOMESMALL    BITMAP                  "res\\homesmall.bmp"
+
+IDB_RIBBON_HOMELARGE    BITMAP                  "res\\homelarge.bmp"
+
+IDB_PANEL_ICONS         BITMAP                  "res\\panelicons.bmp"
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -61,7 +87,9 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\Scribble.ico"
+
 IDR_SCRIBBTYPE          ICON                    "res\\ScribDoc.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -69,14 +97,16 @@ IDR_SCRIBBTYPE          ICON                    "res\\ScribDoc.ico"
 //
 
 IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
 IDR_SCRIBBTYPE_SRVR_IP  BITMAP                  "res\\itoolbar.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Toolbar
 //
 
-IDR_MAINFRAME TOOLBAR  16, 15
+IDR_MAINFRAME TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_FILE_NEW
     BUTTON      ID_FILE_OPEN
@@ -89,7 +119,7 @@ BEGIN
     BUTTON      ID_CONTEXT_HELP
 END
 
-IDR_SCRIBBTYPE_SRVR_IP TOOLBAR  16, 15
+IDR_SCRIBBTYPE_SRVR_IP TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_PEN_THICK_OR_THIN
     SEPARATOR
@@ -103,7 +133,7 @@ END
 // Menu
 //
 
-IDR_MAINFRAME MENU 
+IDR_MAINFRAME MENU
 BEGIN
     POPUP "&File"
     BEGIN
@@ -129,7 +159,7 @@ BEGIN
     END
 END
 
-IDR_SCRIBBTYPE MENU 
+IDR_SCRIBBTYPE MENU
 BEGIN
     POPUP "&File"
     BEGIN
@@ -183,7 +213,7 @@ BEGIN
     END
 END
 
-IDR_SCRIBBTYPE_SRVR_EMB MENU 
+IDR_SCRIBBTYPE_SRVR_EMB MENU
 BEGIN
     POPUP "&File"
     BEGIN
@@ -237,7 +267,7 @@ BEGIN
     END
 END
 
-IDR_SCRIBBTYPE_SRVR_IP MENU 
+IDR_SCRIBBTYPE_SRVR_IP MENU
 BEGIN
     POPUP "&Edit"
     BEGIN
@@ -273,7 +303,7 @@ END
 // Accelerator
 //
 
-IDR_MAINFRAME ACCELERATORS 
+IDR_MAINFRAME ACCELERATORS
 BEGIN
     "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
     "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
@@ -293,7 +323,7 @@ BEGIN
     "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
 END
 
-IDR_SCRIBBTYPE_SRVR_EMB ACCELERATORS 
+IDR_SCRIBBTYPE_SRVR_EMB ACCELERATORS
 BEGIN
     "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
     "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
@@ -313,7 +343,7 @@ BEGIN
     "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
 END
 
-IDR_SCRIBBTYPE_SRVR_IP ACCELERATORS 
+IDR_SCRIBBTYPE_SRVR_IP ACCELERATORS
 BEGIN
     "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
     "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
@@ -341,14 +371,12 @@ FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
     LTEXT           "Scribble Version 1.0",IDC_STATIC,40,10,119,8
-    LTEXT           "© 1995 - 2008 Microsoft Corporation.  All rights reserved.",
-                    IDC_STATIC,40,25,123,22
+    LTEXT           "© 1995 - 2008 Microsoft Corporation.  All rights reserved.",IDC_STATIC,40,25,123,22
     DEFPUSHBUTTON   "OK",IDOK,178,7,32,14,WS_GROUP
 END
 
-IDD_PEN_WIDTHS DIALOG  0, 0, 203, 65
-STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
-    WS_SYSMENU
+IDD_PEN_WIDTHS DIALOG 0, 0, 203, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "Pen Widths"
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -387,7 +415,7 @@ BEGIN
             VALUE "FileDescription", "SCRIBBLE RIBBON MFC Application"
             VALUE "FileVersion", "1, 0, 0, 1"
             VALUE "InternalName", "SCRIBBLE RIBBON"
-            VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+            VALUE "LegalCopyright", "© Microsoft Corporation.  All rights reserved."
             VALUE "OriginalFilename", "SCRIBBLERIBBON.EXE"
             VALUE "ProductName", "SCRIBBLE RIBBON Application"
             VALUE "ProductVersion", "1, 0, 0, 1"
@@ -406,7 +434,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -433,20 +461,20 @@ END
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDR_MAINFRAME           "Scribble Ribbon"
     IDR_SCRIBBTYPE          "\nScribb\nScribb\nScribble Files (*.scb)\n.SCB\nScribble.Document\nScribb Document\nSCRI\nScribble Files"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_APP_TITLE       "Scribble Ribbon"
     AFX_IDS_IDLEMESSAGE     "For Help, press F1"
     AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_INDICATOR_EXT        "EXT"
     ID_INDICATOR_CAPS       "CAP"
@@ -456,7 +484,7 @@ BEGIN
     ID_INDICATOR_REC        "REC"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_NEW             "Create a new document\nNew"
     ID_FILE_OPEN            "Open an existing document\nOpen"
@@ -472,7 +500,7 @@ BEGIN
     ID_FILE_SEND_MAIL       "Send the active document through electronic mail\nSend Mail"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
     ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
@@ -483,7 +511,7 @@ BEGIN
     ID_HELP                 "Display help for current task or command\nHelp"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_MRU_FILE1       "Open this document"
     ID_FILE_MRU_FILE2       "Open this document"
@@ -491,13 +519,13 @@ BEGIN
     ID_FILE_MRU_FILE4       "Open this document"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
     ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
     ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
@@ -507,7 +535,7 @@ BEGIN
     ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_CLEAR           "Erase the selection\nErase"
     ID_EDIT_CLEAR_ALL       "Clears the drawing"
@@ -522,13 +550,13 @@ BEGIN
     ID_EDIT_REDO            "Redo the previously undone action\nRedo"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
     ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_SCSIZE          "Change the window size"
     AFX_IDS_SCMOVE          "Change the window position"
@@ -539,30 +567,30 @@ BEGIN
     AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_SCRESTORE       "Restore the window to normal size"
     AFX_IDS_SCTASKLIST      "Activate Task List"
     AFX_IDS_MDICHILD        "Activate this window"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_DESKACCESSORY   "Opens the selected item"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_PEN_THICK_OR_THIN    "Toggles the line thickness between thin and thick\nToggle pen"
     ID_PEN_WIDTHS           "Sets the size of the thin and thick pen"
 END
 
-#endif    // English (U.S.) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

@@ -608,6 +608,15 @@ makehm /h /a afxhh.h IDW_,HIDW_,0x50000 "%(Identity)" &gt;&gt; "hlp\HTMLDefines.
   <ItemGroup>
     <ResourceCompile Include="scribble.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap2.bmp" />
+    <Image Include="res\filelarge.bmp" />
+    <Image Include="res\filesmall.bmp" />
+    <Image Include="res\homelarge.bmp" />
+    <Image Include="res\homesmall.bmp" />
+    <Image Include="res\main.bmp" />
+    <Image Include="res\panelicons.bmp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -9,6 +9,13 @@
 #define IDR_MAINFRAME                   128
 #define IDR_SCRIBBTYPE                  129
 #define IDD_PEN_WIDTHS                  131
+#define IDB_RIBBON_MAIN                 132
+#define IDB_RIBBON_FILESMALL            134
+#define IDB_RIBBON_FILELARGE            135
+#define IDB_RIBBON_HOMESMALL            136
+#define IDB_RIBBON_HOMELARGE            137
+#define IDB_BITMAP1                     138
+#define IDB_PANEL_ICONS                 138
 #define IDC_THIN_PEN_WIDTH              1000
 #define IDC_THICK_PEN_WIDTH             1001
 #define IDC_DEFAULT_PEN_WIDTHS          1002
@@ -21,7 +28,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        132
+#define _APS_NEXT_RESOURCE_VALUE        139
 #define _APS_NEXT_COMMAND_VALUE         32774
 #define _APS_NEXT_CONTROL_VALUE         1003
 #define _APS_NEXT_SYMED_VALUE           101
