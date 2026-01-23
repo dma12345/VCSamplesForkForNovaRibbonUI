@@ -456,6 +456,7 @@
       <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="res\itoolbar.bmp" />
+    <None Include="res\ribbon1.mfcribbon-ms" />
     <None Include="res\scribble.ico" />
     <None Include="res\scribdoc.ico" />
     <None Include="res\toolbar.bmp" />

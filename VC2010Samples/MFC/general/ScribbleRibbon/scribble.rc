@@ -36,6 +36,25 @@ IDB_RIBBON_HOMELARGE    BITMAP                  "res\\homelarge.bmp"
 
 IDB_PANEL_ICONS         BITMAP                  "res\\panelicons.bmp"
 
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Ribbon
+//
+
+IDR_RIBBON1             RT_RIBBON_XML           "res\\ribbon1.mfcribbon-ms"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    ID_BUTTON2              "File"
+END
+
 #endif    // German (Germany) resources
 /////////////////////////////////////////////////////////////////////////////
 
@@ -46,6 +65,16 @@ IDB_PANEL_ICONS         BITMAP                  "res\\panelicons.bmp"
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+IDR_SCRIBBTYPE_SRVR_IP  BITMAP                  "res\\itoolbar.bmp"
+
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -89,16 +118,6 @@ END
 IDR_MAINFRAME           ICON                    "res\\Scribble.ico"
 
 IDR_SCRIBBTYPE          ICON                    "res\\ScribDoc.ico"
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// Bitmap
-//
-
-IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
-
-IDR_SCRIBBTYPE_SRVR_IP  BITMAP                  "res\\itoolbar.bmp"
 
 
 /////////////////////////////////////////////////////////////////////////////

@@ -3,6 +3,8 @@
 #define HID_PEN_THICK_OR_THIN                   0x18004
 #define HID_PEN_WIDTHS                          0x18005
 #define HID_CANCEL_EDIT_SRVR                    0x18006
+#define HID_BUTTON2                             0x18006
+#define HID_BUTTON10                            0x1800E
  
 // Prompts (IDP_*) 
 #define HIDP_OLE_INIT_FAILED                    0x30064
@@ -12,6 +14,7 @@
 #define HIDR_SCRIBBTYPE_SRVR_EMB                0x20005
 #define HIDR_MAINFRAME                          0x20080
 #define HIDR_SCRIBBTYPE                         0x20081
+#define HIDR_RIBBON1                            0x2008B
  
 // Dialogs (IDD_*) 
 #define HIDD_ABOUTBOX                           0x20064
