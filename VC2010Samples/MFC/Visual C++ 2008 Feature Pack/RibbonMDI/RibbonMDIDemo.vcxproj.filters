@@ -73,15 +73,13 @@
     <None Include="res\Toolbar256.bmp">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="res\workspace.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="res\Write.bmp">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="res\WriteLarge.bmp">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChildFrm.h">
@@ -117,5 +115,10 @@
     <ClInclude Include="WorkspaceBar2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\workspace.bmp">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

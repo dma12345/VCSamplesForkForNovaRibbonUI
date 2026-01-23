@@ -18,7 +18,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <TargetName>Scribble</TargetName>
+    <TargetName>ScribbleRibbon</TargetName>
     <ProjectGUID>{7885CDC4-D221-488C-9B58-992079831A50}</ProjectGUID>
     <RootNamespace>Scribble</RootNamespace>
   </PropertyGroup>
@@ -456,6 +456,7 @@
       <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="res\itoolbar.bmp" />
+    <None Include="res\ribbon1.mfcribbon-ms" />
     <None Include="res\scribble.ico" />
     <None Include="res\scribdoc.ico" />
     <None Include="res\toolbar.bmp" />
@@ -607,6 +608,15 @@ makehm /h /a afxhh.h IDW_,HIDW_,0x50000 "%(Identity)" &gt;&gt; "hlp\HTMLDefines.
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="scribble.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap2.bmp" />
+    <Image Include="res\filelarge.bmp" />
+    <Image Include="res\filesmall.bmp" />
+    <Image Include="res\homelarge.bmp" />
+    <Image Include="res\homesmall.bmp" />
+    <Image Include="res\main.bmp" />
+    <Image Include="res\panelicons.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

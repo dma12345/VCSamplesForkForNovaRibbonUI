@@ -329,6 +329,7 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="ReadMe.htm" />
+    <None Include="res\ribbon1.mfcribbon-ms" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="scribble.rc">
@@ -340,5 +341,28 @@
     <CustomBuild Include="resource.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\main.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\filesmall.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\filelarge.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\homesmall.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\homelarge.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\panelicons.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
