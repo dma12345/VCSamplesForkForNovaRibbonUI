@@ -100,6 +100,10 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	}
 	m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
 
+	// Set the default manager to Office 2007
+	CMFCVisualManager::SetDefaultManager(RUNTIME_CLASS(CMFCVisualManagerOffice2007));
+	CMFCVisualManagerOffice2007::SetStyle(CMFCVisualManagerOffice2007::Office2007_Silver);
+
 	return 0;
 }
 
