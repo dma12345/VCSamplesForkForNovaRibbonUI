@@ -39,6 +39,10 @@ public:
 protected:  // control bar embedded members
 	CMFCStatusBar  m_wndStatusBar;
 	CMFCToolBar    m_wndToolBar;
+
+	// Ribbon bar for the application
+	CMFCRibbonBar m_wndRibbonBar;
+
 	HICON m_hIcon;
 
 // Generated message map functions

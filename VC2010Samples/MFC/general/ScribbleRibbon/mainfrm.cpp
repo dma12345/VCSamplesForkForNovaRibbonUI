@@ -93,6 +93,12 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	EnableDocking(CBRS_ALIGN_ANY);
 	DockPane(&m_wndToolBar);
 
+	// Create the ribbon bar
+	if (!m_wndRibbonBar.Create(this))
+	{
+		return -1;   //Failed to create ribbon bar
+	}
+	m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
 
 	return 0;
 }
