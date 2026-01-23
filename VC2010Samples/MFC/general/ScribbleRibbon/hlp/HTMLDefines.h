@@ -5,7 +5,7 @@
 #define HID_CANCEL_EDIT_SRVR                    0x18006
 #define HID_BUTTON2                             0x18006
 #define HID_BUTTON10                            0x1800E
-#define HID_BUTTON5                             0x18013
+#define HID_BUTTON6                             0x18014
  
 // Prompts (IDP_*) 
 #define HIDP_OLE_INIT_FAILED                    0x30064
