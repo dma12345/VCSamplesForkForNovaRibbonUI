@@ -13,6 +13,12 @@
       <UniqueIdentifier>{b539b7b3-21b5-4338-be35-7205d373d3eb}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
     </Filter>
+    <Filter Include="Source Files\VisualManager">
+      <UniqueIdentifier>{e0744179-1f04-4044-bdc9-958534e8571f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\VisualManager">
+      <UniqueIdentifier>{b3cf53aa-7803-4030-8250-5b83ceaeb77e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ChildFrm.cpp">
@@ -40,6 +46,33 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="WorkspaceBar2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualManager\afxvisualmanager.cpp">
+      <Filter>Source Files\VisualManager</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualManager\afxvisualmanageroffice2003.cpp">
+      <Filter>Source Files\VisualManager</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualManager\afxvisualmanageroffice2007.cpp">
+      <Filter>Source Files\VisualManager</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualManager\afxvisualmanagerofficexp.cpp">
+      <Filter>Source Files\VisualManager</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualManager\afxvisualmanagervs2005.cpp">
+      <Filter>Source Files\VisualManager</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualManager\afxvisualmanagervs2008.cpp">
+      <Filter>Source Files\VisualManager</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualManager\afxvisualmanagerwindows.cpp">
+      <Filter>Source Files\VisualManager</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualManager\afxvisualmanagerwindows7.cpp">
+      <Filter>Source Files\VisualManager</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualManager\CMFCVisualManagerVS2008Nova.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -113,6 +146,33 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WorkspaceBar2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualManager\afxvisualmanager.h">
+      <Filter>Resource Files\VisualManager</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualManager\afxvisualmanageroffice2003.h">
+      <Filter>Resource Files\VisualManager</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualManager\afxvisualmanageroffice2007.h">
+      <Filter>Resource Files\VisualManager</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualManager\afxvisualmanagerofficexp.h">
+      <Filter>Resource Files\VisualManager</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualManager\afxvisualmanagervs2005.h">
+      <Filter>Resource Files\VisualManager</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualManager\afxvisualmanagervs2008.h">
+      <Filter>Resource Files\VisualManager</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualManager\afxvisualmanagerwindows.h">
+      <Filter>Resource Files\VisualManager</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualManager\afxvisualmanagerwindows7.h">
+      <Filter>Resource Files\VisualManager</Filter>
+    </ClInclude>
+    <ClInclude Include="VisualManager\CMFCVisualManagerVS2008Nova.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
