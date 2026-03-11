@@ -18,7 +18,7 @@ COLORREF CMFCVisualManagerVS2008Nova::OnDrawRibbonCategoryTab(CDC* pDC, CMFCRibb
 {
 	CRect rect = ((CMFCRibbonBaseElement*)pTab)->GetRect();
 	////pDC->FillSolidRect(rect, RGB(255, 255, 255));
-	pDC->FillSolidRect(rect, RGB(68, 0, 0));
+	pDC->FillSolidRect(rect, RGB(255, 150, 150));
 	return RGB(0, 0, 0); // Textfarbe schwarz
 }
 
@@ -26,5 +26,5 @@ COLORREF CMFCVisualManagerVS2008Nova::OnDrawRibbonCategoryTab(CDC* pDC, CMFCRibb
 void CMFCVisualManagerVS2008Nova::OnDrawRibbonCategory(CDC* pDC, CMFCRibbonCategory* pCategory, CRect rectCategory)
 {
 	//pDC->FillSolidRect(rectCategory, RGB(255, 255, 255));
-	pDC->FillSolidRect(rectCategory, RGB(0, 50, 0));
+	pDC->FillSolidRect(rectCategory, RGB(150, 255, 150));
 }
