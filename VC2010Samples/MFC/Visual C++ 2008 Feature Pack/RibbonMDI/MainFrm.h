@@ -48,9 +48,13 @@ protected:  // control bar embedded members
 	CMFCStatusBar	m_wndStatusBar;
 	CWorkspaceBar		m_wndWorkSpace;
 	CWorkspaceBar2		m_wndWorkSpace2;
+	CWorkspaceBar2		m_wndWorkSpace3;
+	CWorkspaceBar2		m_wndWorkSpace4;
+	CWorkspaceBar2		m_wndWorkSpace5;
+	CWorkspaceBar2		m_wndWorkSpace6;
 	COutputBar			m_wndOutput;
 	CMFCToolBarImages		m_PanelImages;
-	
+
 protected:
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 	afx_msg void OnWindowManager();
@@ -64,6 +68,14 @@ protected:
 	afx_msg void OnUpdateViewWorkspace(CCmdUI* pCmdUI);
 	afx_msg void OnViewWorkspace2();
 	afx_msg void OnUpdateViewWorkspace2(CCmdUI* pCmdUI);
+	afx_msg void OnViewWorkspace3();
+	afx_msg void OnUpdateViewWorkspace3(CCmdUI* pCmdUI);
+	afx_msg void OnViewWorkspace4();
+	afx_msg void OnUpdateViewWorkspace4(CCmdUI* pCmdUI);
+	afx_msg void OnViewWorkspace5();
+	afx_msg void OnUpdateViewWorkspace5(CCmdUI* pCmdUI);
+	afx_msg void OnViewWorkspace6();
+	afx_msg void OnUpdateViewWorkspace6(CCmdUI* pCmdUI);
 	afx_msg void OnViewOutput();
 	afx_msg void OnUpdateViewOutput(CCmdUI* pCmdUI);
 

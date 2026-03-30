@@ -41,6 +41,14 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	ON_UPDATE_COMMAND_UI(ID_VIEW_WORKSPACE, OnUpdateViewWorkspace)
 	ON_COMMAND(ID_VIEW_WORKSPACE2, OnViewWorkspace2)
 	ON_UPDATE_COMMAND_UI(ID_VIEW_WORKSPACE2, OnUpdateViewWorkspace2)
+	ON_COMMAND(ID_VIEW_WORKSPACE3, OnViewWorkspace3)
+	ON_UPDATE_COMMAND_UI(ID_VIEW_WORKSPACE3, OnUpdateViewWorkspace3)
+	ON_COMMAND(ID_VIEW_WORKSPACE4, OnViewWorkspace4)
+	ON_UPDATE_COMMAND_UI(ID_VIEW_WORKSPACE4, OnUpdateViewWorkspace4)
+	ON_COMMAND(ID_VIEW_WORKSPACE5, OnViewWorkspace5)
+	ON_UPDATE_COMMAND_UI(ID_VIEW_WORKSPACE5, OnUpdateViewWorkspace5)
+	ON_COMMAND(ID_VIEW_WORKSPACE6, OnViewWorkspace6)
+	ON_UPDATE_COMMAND_UI(ID_VIEW_WORKSPACE6, OnUpdateViewWorkspace6)
 	ON_COMMAND(ID_VIEW_OUTPUT, OnViewOutput)
 	ON_UPDATE_COMMAND_UI(ID_VIEW_OUTPUT, OnUpdateViewOutput)
 END_MESSAGE_MAP()
@@ -127,7 +135,47 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	m_wndWorkSpace2.SetIcon (imagesWorkspace.ExtractIcon (1), FALSE);
 
-	if (!m_wndOutput.Create (_T("Output"), this, CRect (0, 0, 150, 150),
+	if (!m_wndWorkSpace3.Create (_T("View 3"), this, CRect (0, 0, 200, 200),
+		TRUE, ID_VIEW_WORKSPACE3,
+		WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_LEFT | CBRS_FLOAT_MULTI))
+	{
+		TRACE0("Failed to create Workspace bar 3\n");
+		return FALSE;      // fail to create
+	}
+
+	m_wndWorkSpace3.SetIcon (imagesWorkspace.ExtractIcon (0), FALSE);
+
+	if (!m_wndWorkSpace4.Create (_T("View 4"), this, CRect (0, 0, 200, 200),
+		TRUE, ID_VIEW_WORKSPACE4,
+		WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_LEFT | CBRS_FLOAT_MULTI))
+	{
+		TRACE0("Failed to create Workspace bar 4\n");
+		return FALSE;      // fail to create
+	}
+
+	m_wndWorkSpace4.SetIcon (imagesWorkspace.ExtractIcon (0), FALSE);
+
+	if (!m_wndWorkSpace5.Create (_T("View 5"), this, CRect (0, 0, 200, 200),
+		TRUE, ID_VIEW_WORKSPACE5,
+		WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_LEFT | CBRS_FLOAT_MULTI))
+	{
+		TRACE0("Failed to create Workspace bar 5\n");
+		return FALSE;      // fail to create
+	}
+
+	m_wndWorkSpace5.SetIcon (imagesWorkspace.ExtractIcon (0), FALSE);
+
+	if (!m_wndWorkSpace6.Create (_T("View 6"), this, CRect (0, 0, 200, 200),
+		TRUE, ID_VIEW_WORKSPACE6,
+		WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_LEFT | CBRS_FLOAT_MULTI))
+	{
+		TRACE0("Failed to create Workspace bar 6\n");
+		return FALSE;      // fail to create
+	}
+
+	m_wndWorkSpace6.SetIcon (imagesWorkspace.ExtractIcon (0), FALSE);
+
+	if (!m_wndOutput.Create(_T("Output"), this, CRect(0, 0, 150, 150),
 		TRUE /* Has gripper */, ID_VIEW_OUTPUT,
 		WS_CHILD | WS_VISIBLE | CBRS_BOTTOM | CBRS_FLOAT_MULTI))
 	{
@@ -135,15 +183,23 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;      // fail to create
 	}
 
-	m_wndOutput.SetIcon (imagesWorkspace.ExtractIcon (2), FALSE);
+	m_wndOutput.SetIcon(imagesWorkspace.ExtractIcon(2), FALSE);
 
 	m_wndWorkSpace.EnableDocking(CBRS_ALIGN_ANY);
 	m_wndWorkSpace2.EnableDocking(CBRS_ALIGN_ANY);
+	m_wndWorkSpace3.EnableDocking(CBRS_ALIGN_ANY);
+	m_wndWorkSpace4.EnableDocking(CBRS_ALIGN_ANY);
+	m_wndWorkSpace5.EnableDocking(CBRS_ALIGN_ANY);
+	m_wndWorkSpace6.EnableDocking(CBRS_ALIGN_ANY);
 	m_wndOutput.EnableDocking(CBRS_ALIGN_ANY);
 	EnableDocking(CBRS_ALIGN_ANY);
 	EnableAutoHidePanes(CBRS_ALIGN_ANY);
 	DockPane (&m_wndWorkSpace);
 	m_wndWorkSpace2.AttachToTabWnd (&m_wndWorkSpace, DM_STANDARD, FALSE, NULL);
+	m_wndWorkSpace3.AttachToTabWnd (&m_wndWorkSpace, DM_STANDARD, FALSE, NULL);
+	m_wndWorkSpace4.AttachToTabWnd (&m_wndWorkSpace, DM_STANDARD, FALSE, NULL);
+	m_wndWorkSpace5.AttachToTabWnd (&m_wndWorkSpace, DM_STANDARD, FALSE, NULL);
+	m_wndWorkSpace6.AttachToTabWnd (&m_wndWorkSpace, DM_STANDARD, FALSE, NULL);
 	DockPane(&m_wndOutput);
 
 	// Enable windows manager:
@@ -312,6 +368,62 @@ void CMainFrame::OnUpdateViewWorkspace2(CCmdUI* pCmdUI)
 	pCmdUI->Enable (!IsPrintPreviewMode ());
 }
 
+void CMainFrame::OnViewWorkspace3() 
+{
+	ShowPane (&m_wndWorkSpace3,
+					!(m_wndWorkSpace3.IsVisible ()),
+					FALSE, TRUE);
+	RecalcLayout ();
+}
+
+void CMainFrame::OnUpdateViewWorkspace3(CCmdUI* pCmdUI) 
+{
+	pCmdUI->SetCheck (m_wndWorkSpace3.IsVisible ());
+	pCmdUI->Enable (!IsPrintPreviewMode ());
+}
+
+void CMainFrame::OnViewWorkspace4() 
+{
+	ShowPane (&m_wndWorkSpace4,
+					!(m_wndWorkSpace4.IsVisible ()),
+					FALSE, TRUE);
+	RecalcLayout ();
+}
+
+void CMainFrame::OnUpdateViewWorkspace4(CCmdUI* pCmdUI) 
+{
+	pCmdUI->SetCheck (m_wndWorkSpace4.IsVisible ());
+	pCmdUI->Enable (!IsPrintPreviewMode ());
+}
+
+void CMainFrame::OnViewWorkspace5() 
+{
+	ShowPane (&m_wndWorkSpace5,
+					!(m_wndWorkSpace5.IsVisible ()),
+					FALSE, TRUE);
+	RecalcLayout ();
+}
+
+void CMainFrame::OnUpdateViewWorkspace5(CCmdUI* pCmdUI) 
+{
+	pCmdUI->SetCheck (m_wndWorkSpace5.IsVisible ());
+	pCmdUI->Enable (!IsPrintPreviewMode ());
+}
+
+void CMainFrame::OnViewWorkspace6() 
+{
+	ShowPane (&m_wndWorkSpace6,
+					!(m_wndWorkSpace6.IsVisible ()),
+					FALSE, TRUE);
+	RecalcLayout ();
+}
+
+void CMainFrame::OnUpdateViewWorkspace6(CCmdUI* pCmdUI) 
+{
+	pCmdUI->SetCheck (m_wndWorkSpace6.IsVisible ());
+	pCmdUI->Enable (!IsPrintPreviewMode ());
+}
+
 void CMainFrame::OnViewOutput() 
 {
 	ShowPane (&m_wndOutput,
@@ -403,6 +515,10 @@ void CMainFrame::InitRibbon ()
 
 	pPanelWindow->Add (new CMFCRibbonCheckBox (ID_VIEW_WORKSPACE, _T("View 1\n1")));
 	pPanelWindow->Add (new CMFCRibbonCheckBox (ID_VIEW_WORKSPACE2, _T("View 2\n2")));
+	pPanelWindow->Add (new CMFCRibbonCheckBox (ID_VIEW_WORKSPACE3, _T("View 3\n3")));
+	pPanelWindow->Add (new CMFCRibbonCheckBox (ID_VIEW_WORKSPACE4, _T("View 4\n4")));
+	pPanelWindow->Add (new CMFCRibbonCheckBox (ID_VIEW_WORKSPACE5, _T("View 5\n5")));
+	pPanelWindow->Add (new CMFCRibbonCheckBox (ID_VIEW_WORKSPACE6, _T("View 6\n6")));
 	pPanelWindow->Add (new CMFCRibbonCheckBox (ID_VIEW_OUTPUT, _T("Output\no")));
 	pPanelWindow->Add (new CMFCRibbonSeparator);
 

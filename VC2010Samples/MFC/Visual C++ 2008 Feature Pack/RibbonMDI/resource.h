@@ -24,8 +24,12 @@
 #define IDC_COMPANY_URL                 1041
 #define ID_VIEW_CUSTOMIZE               32770
 #define ID_VIEW_TOOLBARS                32771
+#define ID_VIEW_WORKSPACE	            32791
 #define ID_VIEW_WORKSPACE2              32792
-#define ID_VIEW_WORKSPACE               32803
+#define ID_VIEW_WORKSPACE3              32793
+#define ID_VIEW_WORKSPACE4              32794
+#define ID_VIEW_WORKSPACE5              32795
+#define ID_VIEW_WORKSPACE6              32796
 #define ID_VIEW_OUTPUT                  32804
 #define ID_WINDOW_MANAGER               32823
 #define ID_VIEW_APPLOOK_2000            32833
